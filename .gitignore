@@ -1,0 +1,41 @@
+# System files
+.bash_history
+.bash_logout
+.bash_profile
+.bashrc
+.zprofile
+.zshrc
+.ssh/
+.aws/
+.config/
+.local/
+.amazon-q.dotfiles.bak/
+.gitconfig
+
+# Amazon Q files
+amazon-q.deb*
+q.zip
+q/
+
+# Temporary files
+*.zip
+*_base64.txt
+download_*
+
+# Cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
