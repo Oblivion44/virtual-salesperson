@@ -1,325 +1,132 @@
-# Beauty Recommendation Chatbot - LLM Enhanced DDD Version
+# AI Virtual Salesperson Chatbot - Planning & Documentation
 
-## 🌟 Welcome to Your AI Beauty Expert! 💄✨
+## 🎯 Project Overview
+This repository contains the comprehensive planning and documentation for an AI-powered virtual salesperson chatbot for a beauty e-commerce company. The chatbot will handle 24K products across Skin, Hair, and Makeup categories.
 
-This repository contains an advanced Beauty Recommendation Chatbot built with **Domain Driven Design (DDD)** architecture and **LLM-powered data collection**. The chatbot provides intelligent beauty advice, product recommendations, and natural remedies through natural language conversations, with the ability to learn and improve from collected data.
+## 📋 Project Status: Planning Phase Complete ✅
 
-## ✨ Features
+### ✅ Phase 1: Requirements Analysis & Documentation
+- [x] User Stories Documentation (6 epics, 15+ user stories)
+- [x] Beauty Portfolio Data Structure
+- [x] Product Catalogue Structure  
+- [x] AI Guardrails & Content Filtering Requirements
+- [x] AWS Bedrock LLM Integration Requirements
 
-- **🤖 LLM-Powered Data Collection** - Intelligent context analysis for beauty data
-- **🔍 Advanced Concern Detection** - AI-powered identification with 85%+ accuracy
-- **💬 Natural Conversations** - Three conversation types: Concern-based, Exploration, Chit-chat
-- **📚 Educational Content** - Comprehensive beauty education and tips
-- **🌿 Natural Remedies** - Home remedies for common beauty issues
-- **🛒 Smart Recommendations** - Personalized product suggestions
-- **📊 Analytics** - Track conversations and user interactions
-- **🎯 Event Sourcing** - Complete audit trail of all interactions
-- **📁 CSV Data Integration** - Flexible data loading from CSV files
-- **🔄 Automatic Code Regeneration** - System improves based on collected data
-- **📤 Git Integration** - Automated commits and deployment
+### ✅ Phase 2: Core Feature Planning  
+- [x] Feature 1: Skin/Hair Concern Analysis & Product Recommendations
+- [x] Feature 2: Educational Content Delivery (Videos & Tutorials)
+- [x] Feature 3: Personalized Beauty Routine Curation
+- [x] Budget Handling Logic (Customer-provided vs Top Sellers)
+- [x] Nykaa.com Integration & Product Linking
 
-## 🚀 Quick Start
+### 🚀 Next Phase: Technical Architecture (Ready to Start)
 
-### Option 1: Enhanced LLM System (Recommended)
+## 🗂️ Documentation Structure
 
-```bash
-# Clone the repository
-git clone git@github.com:Oblivion44/virtual-salesperson.git
-cd virtual-salesperson
+### `/inception/` - Complete Project Documentation
+- **`overview_user_stories.md`** - 6 epics with comprehensive user stories
+- **`beauty_portfolio_structure.md`** - Customer data collection framework
+- **`product_catalogue_structure.md`** - 24K product database structure
+- **`ai_guardrails_requirements.md`** - Safety and content filtering
+- **`aws_bedrock_integration.md`** - LLM integration architecture
+- **`feature_1_concern_analysis.md`** - Core recommendation engine
+- **`feature_2_educational_content.md`** - Video/tutorial system
+- **`feature_3_routine_curation.md`** - Personalized routine builder
+- **`budget_handling_logic.md`** - Smart budget processing
+- **`nykaa_integration_plan.md`** - E-commerce integration
 
-# Run the LLM-enhanced system
-cd beauty_chatbot_ddd_package
-python3 llm_enhanced_system.py
-```
+### Root Files
+- **`plan.md`** - Master development plan with checkboxes
+- **`REPOSITORY_CLEANUP_SUMMARY.md`** - Repository transition notes
 
-### Option 2: Command Line (Local Use)
+## 🎯 Key Features Planned
 
-```bash
-# Run the standard chatbot
-cd beauty_chatbot_ddd_package
-python3 run_chatbot.py
-```
+### 1. Intelligent Conversation Flow
+- Natural greeting and category detection (Skin/Hair/Makeup)
+- Progressive profile building without rigid forms
+- AI-powered concern analysis using AWS Bedrock
 
-### Option 3: Google Colab (Recommended)
+### 2. Personalized Recommendations
+- Multi-factor product filtering (type, concerns, age, budget)
+- Intelligent review filtering with NLP sentiment analysis
+- Compelling AI-generated sales pitches
+- Direct Nykaa.com integration with images and links
 
-**Method 1: One-Click Setup**
-```python
-# Copy and paste this into a Google Colab cell
-!wget https://raw.githubusercontent.com/Oblivion44/virtual-salesperson/main/beauty_chatbot_ddd_package/run_colab_fixed.py
-exec(open('run_colab_fixed.py').read())
-```
+### 3. Educational Content System
+- 10-second real human tutorial videos (no intro/outro)
+- Step-by-step visual guides and ingredient education
+- Home remedy suggestions with safety notes
+- Age-appropriate content personalization
 
-**Method 2: Manual Copy-Paste**
-1. Go to [colab_one_cell.py](beauty_chatbot_ddd_package/colab_one_cell.py)
-2. Copy the entire file content
-3. Paste into a Google Colab cell
-4. Run the cell
+### 4. Smart Budget Handling
+- Natural language budget detection
+- "Do you have any budget constraints?" approach
+- Top seller recommendations when no budget specified
+- Value proposition and cost-per-use communication
 
-## 🤖 LLM-Enhanced Features
+### 5. Routine Curation Engine
+- Comprehensive skincare/haircare/makeup routines
+- Interactive customization capabilities
+- Budget-aware product selection
+- Phased purchase recommendations
 
-### **Intelligent Data Collection**
-- **Context Analysis** - Automatically identifies product descriptions, reviews, or ingredient information
-- **Sentiment Analysis** - Understands positive/negative feedback
-- **Smart Structuring** - Converts unstructured text into structured data
-- **Rating Extraction** - Automatically detects ratings and recommendations
+## 🛠️ Technical Specifications
 
-### **Automatic System Improvement**
-- **Code Regeneration** - Updates chatbot based on collected data
-- **Enhanced Responses** - Improves answers using real user data
-- **Dynamic Learning** - System gets smarter with more data
-- **Git Integration** - Automatically commits improvements
+### Core Technologies
+- **LLM**: AWS Bedrock (Claude 3 + Titan models)
+- **Deployment**: Google Colab (POC)
+- **Integration**: Nykaa.com (images + product links)
+- **Data**: Product catalogue CSV + Reviews CSV
+- **Content**: Real human-like videos (10 seconds max)
 
-### **Interactive Data Collection**
-```bash
-# Run the LLM data collector
-python3 llm_enhanced_system.py
+### Key Requirements
+- **Age Groups**: Teens (13-19), Young Adults (20-29), Adults (30-39), Mature (40+)
+- **Categories**: 24K products across Skin, Hair, Makeup
+- **Sub-categories**: Using canonical_l3 field from product catalogue
+- **Budget**: Customer-provided constraints, no predefined ranges
+- **Reviews**: Positive sentiment filtering with NLP
 
-# Or collect data only
-python3 llm_enhanced_system.py collect
-```
+## 📊 Success Metrics Defined
+- **Accuracy**: 85%+ concern detection, 95%+ working Nykaa links
+- **Engagement**: 70%+ users request educational content
+- **Satisfaction**: 90%+ satisfaction with recommendations
+- **Adoption**: 60%+ customers adopt suggested routines
+- **Conversion**: 15%+ click-through rate to Nykaa
 
-## 🏗️ Architecture
+## 🚀 Implementation Roadmap
 
-Built with **Domain Driven Design** principles and **LLM enhancement**:
+### Phase 3: Technical Architecture (Next)
+- Web-based UI architecture for Google Colab
+- AWS Bedrock LLM integration architecture
+- NLP sentiment analysis system design
+- AI content generation pipeline
+- Product recommendation algorithm
 
-- **8 Value Objects** - Immutable data structures with validation
-- **7 Entities** - Domain objects with identity and behavior
-- **2 Aggregates** - Consistency boundaries for business logic
-- **4 Domain Services** - Complex business operations
-- **6 Repositories** - Data access abstraction layer
-- **9 Domain Events** - Event sourcing for complete audit trail
-- **1 Application Service** - Workflow orchestration
-- **🤖 LLM Context Analyzer** - Intelligent data processing
-- **🔄 Code Regenerator** - Automatic system updates
-- **📤 Git Integration** - Automated deployment
+### Phase 4: Data Management
+- Beauty portfolio data collection methods
+- Product catalogue integration (24K products)
+- Review filtering and sentiment analysis
+- Content generation and storage
 
-## 📁 Repository Structure
+### Phase 5: User Experience Design
+- Conversation flow implementation
+- Product presentation format
+- Routine curation interface
+- Educational content delivery
 
-```
-virtual-salesperson/
-├── README.md                           # This file
-├── beauty_chatbot_ddd_package/         # 🚀 Production-ready package
-│   ├── llm_enhanced_system.py          # 🤖 Main LLM system orchestrator
-│   ├── llm_data_collector.py           # 🔍 LLM-powered data collection
-│   ├── code_regenerator.py             # 🔄 Automatic code regeneration
-│   ├── git_integration.py              # 📤 Git automation
-│   ├── run_chatbot.py                  # Command-line runner
-│   ├── run_colab_fixed.py              # Google Colab runner
-│   ├── colab_one_cell.py               # Simple Colab solution
-│   ├── README.md                       # Detailed usage guide
-│   ├── requirements.txt                # Dependencies
-│   ├── ddd_domain/                     # Complete DDD implementation
-│   │   ├── value_objects.py            # 8 value object classes
-│   │   ├── entities.py                 # 7 entity classes
-│   │   ├── aggregates.py               # 2 aggregate root classes
-│   │   ├── domain_services.py          # 4 domain service classes
-│   │   ├── repositories.py             # 6 repository classes
-│   │   ├── domain_events.py            # 9 domain event classes
-│   │   ├── application_service.py      # Application orchestration
-│   │   ├── simple_test.py              # Unit tests
-│   │   ├── integration_demo.py         # Integration tests
-│   │   └── IMPLEMENTATION_SUMMARY.md   # Technical documentation
-│   ├── core/                           # Integration layer
-│   │   ├── beauty_chatbot_simple.py    # Simplified chatbot interface
-│   │   └── beauty_chatbot_enhanced.py  # 🤖 LLM-enhanced chatbot (auto-generated)
-│   ├── data/                           # Sample CSV data
-│   │   ├── sample_concerns.csv         # Beauty concerns data
-│   │   ├── sample_ingredients.csv      # Ingredients data
-│   │   ├── sample_products.csv         # Products data
-│   │   ├── collected_products.csv      # 🤖 User-collected products (auto-generated)
-│   │   ├── collected_ingredients.csv   # 🤖 User-collected ingredients (auto-generated)
-│   │   └── collected_reviews.csv       # 🤖 User-collected reviews (auto-generated)
-│   └── legacy/                         # Original chatbot (v1.0)
-│       ├── README.md                   # Legacy documentation
-│       ├── beauty_chatbot_core.py      # Original core logic
-│       ├── beauty_chatbot_ui.py        # Original UI components
-│       └── beauty_chatbot_main.ipynb   # Original Colab notebook
-└── .gitignore                          # Git ignore rules
-```
+### Phase 6: Implementation & Testing
+- Google Colab environment setup
+- Component development and integration
+- Testing strategy and validation
+- POC deployment and demonstration
 
-## 💬 Usage Examples
-
-### LLM Data Collection
-```
-System: Please provide beauty-related information:
-You: I love the CeraVe Hydrating Cleanser! It's perfect for my dry skin and contains ceramides and hyaluronic acid. 5 stars!
-
-🔍 Detected content type: review
-⭐ Collecting review information...
-✅ Data collected successfully!
-```
-
-### Enhanced Concern Detection
-```
-You: I have acne problems on my face
-Bot: **About Acne:** (Enhanced with collected data)
-     Based on user reviews, acne occurs when pores become clogged...
-     
-     **Top Recommended Products:**
-     • CeraVe Foaming Cleanser ⭐⭐⭐⭐⭐
-     • The Ordinary Niacinamide ⭐⭐⭐⭐
-```
-
-### Automatic System Updates
-```
-🔄 Code regeneration completed!
-📤 Changes committed to Git
-🎉 Your chatbot is now smarter with collected data!
-```
-
-## 🤖 LLM Workflow
-
-### **1. Data Collection**
-```bash
-python3 llm_enhanced_system.py collect
-```
-- Analyzes user input for context (product/ingredient/review)
-- Extracts structured information automatically
-- Saves to CSV files for integration
-
-### **2. Code Regeneration**
-```bash
-python3 llm_enhanced_system.py generate
-```
-- Updates concern detection with new data
-- Enhances product recommendations
-- Improves response generation
-
-### **3. Git Integration**
-```bash
-python3 llm_enhanced_system.py push
-```
-- Commits collected data
-- Commits enhanced code
-- Pushes to remote repository
-
-### **4. Complete Workflow**
-```bash
-python3 llm_enhanced_system.py all
-```
-- Runs all steps automatically
-- Provides comprehensive system enhancement
-
-## 📊 CSV Data Integration
-
-The system supports both sample and collected data:
-
-```
-data/
-├── sample_concerns.csv          # Pre-loaded beauty concerns
-├── sample_ingredients.csv       # Pre-loaded ingredients
-├── sample_products.csv          # Pre-loaded products
-├── collected_products.csv       # 🤖 LLM-collected products
-├── collected_ingredients.csv    # 🤖 LLM-collected ingredients
-└── collected_reviews.csv        # 🤖 LLM-collected reviews
-```
-
-## 🧪 Testing
-
-Run the comprehensive test suite:
-
-```bash
-# Unit tests
-cd beauty_chatbot_ddd_package/ddd_domain
-python3 simple_test.py
-
-# Integration tests
-python3 integration_demo.py
-
-# Test enhanced chatbot
-cd core
-python3 beauty_chatbot_enhanced.py
-```
-
-## 📈 Performance
-
-- **Response Time**: < 200ms average
-- **Accuracy**: 85%+ concern detection (improves with collected data)
-- **Scalability**: 1000+ concurrent conversations
-- **Memory Efficiency**: Optimized in-memory storage
-- **Learning Rate**: Continuous improvement with user data
-
-## 🔧 Customization
-
-### Adding New Data
-1. Run the LLM data collector: `python3 llm_enhanced_system.py collect`
-2. Provide beauty-related information in natural language
-3. System automatically structures and integrates the data
-4. Enhanced chatbot is generated automatically
-
-### Manual Data Addition
-1. Update CSV files in `data/` directory
-2. Run code regeneration: `python3 llm_enhanced_system.py generate`
-3. Push changes: `python3 llm_enhanced_system.py push`
-
-### Extending Features
-- Add new LLM analysis capabilities in `llm_data_collector.py`
-- Enhance code generation in `code_regenerator.py`
-- Modify Git workflow in `git_integration.py`
-
-## 🎯 Version History
-
-### v3.0 - LLM Enhanced (Current) ✅
-- **🤖 LLM-powered data collection** - Intelligent context analysis
-- **🔄 Automatic code regeneration** - System improves with data
-- **📤 Git integration** - Automated deployment workflow
-- **🧠 Enhanced chatbot** - Learns from collected data
-- **📊 Advanced analytics** - Better insights and recommendations
-
-### v2.0 - DDD Enhanced
-- Complete Domain Driven Design architecture
-- Advanced concern detection with 85%+ accuracy
-- Event sourcing for complete audit trail
-- CSV data integration support
-- Production-ready deployment package
-- Google Colab integration
-
-### v1.0 - Original Implementation (Legacy)
-- Basic chatbot functionality
-- Simple concern detection
-- Colab notebook interface
-- Located in `legacy/` directory
-
-## 🤝 Contributing
-
-1. Use the LLM system to collect and contribute data
-2. Follow DDD principles when adding features
-3. Add tests for new functionality
-4. Update documentation
-5. Use automated Git integration for commits
-
-## 📄 License
-
-This project is provided for educational and demonstration purposes.
-
-## 🚀 Get Started Now!
-
-### For LLM-Enhanced Experience (Recommended)
-```bash
-git clone git@github.com:Oblivion44/virtual-salesperson.git
-cd virtual-salesperson/beauty_chatbot_ddd_package
-python3 llm_enhanced_system.py
-```
-
-### For Google Colab Users
-```python
-!wget https://raw.githubusercontent.com/Oblivion44/virtual-salesperson/main/beauty_chatbot_ddd_package/run_colab_fixed.py
-exec(open('run_colab_fixed.py').read())
-```
-
-### For Local Users
-```bash
-git clone git@github.com:Oblivion44/virtual-salesperson.git
-cd virtual-salesperson/beauty_chatbot_ddd_package
-python3 run_chatbot.py
-```
-
-**Ready to enhance your beauty routine with LLM-powered AI! 🌟💄**
+## 📝 Development Notes
+- All documentation follows product manager specifications
+- User stories serve as development contracts
+- Comprehensive planning ensures smooth implementation
+- Ready for technical architecture phase
 
 ---
 
-**Latest Version**: v3.0 LLM Enhanced  
-**Status**: Production Ready with AI Learning  
-**Architecture**: Domain Driven Design + LLM Integration  
-**Performance**: Sub-second response times + Continuous Learning  
-**Platforms**: Command Line, Google Colab, Automated Git Integration
+**Status**: Planning Complete ✅ | **Next**: Technical Architecture Design
+**Last Updated**: August 23, 2025 | **Phase**: 2/6 Complete

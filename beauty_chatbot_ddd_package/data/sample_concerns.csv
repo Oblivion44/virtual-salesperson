@@ -1,8 +1,0 @@
-concern_id,name,category,keywords
-acne,Acne,SKIN,"acne,pimples,breakouts,spots,blemishes"
-dryness,Dryness,SKIN,"dry,dehydrated,flaky,tight"
-oily_skin,Oily Skin,SKIN,"oily,greasy,shiny,excess oil"
-aging,Aging,SKIN,"wrinkles,fine lines,aging,anti-aging"
-dark_spots,Dark Spots,SKIN,"dark spots,hyperpigmentation,age spots"
-hair_loss,Hair Loss,HAIR,"hair loss,thinning,balding,hair fall"
-dandruff,Dandruff,HAIR,"dandruff,flaky scalp,itchy scalp"

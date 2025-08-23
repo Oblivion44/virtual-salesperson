@@ -1,7 +1,0 @@
-ingredient_id,name,benefits,safety_rating
-salicylic_acid,Salicylic Acid,"Unclogs pores,Reduces acne",SAFE
-hyaluronic_acid,Hyaluronic Acid,"Hydrates skin,Plumps skin",SAFE
-niacinamide,Niacinamide,"Controls oil,Minimizes pores",SAFE
-retinol,Retinol,"Reduces wrinkles,Improves texture",CAUTION
-vitamin_c,Vitamin C,"Brightens skin,Fades dark spots",SAFE
-ceramides,Ceramides,"Repairs barrier,Locks in moisture",SAFE

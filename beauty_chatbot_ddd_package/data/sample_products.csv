@@ -1,6 +1,0 @@
-product_id,name,price,rating,category,image_url
-prod_001,Clear Skin Cleanser,25.99,4.2,skincare,https://example.com/cleanser.jpg
-prod_002,Hydrating Serum,45.00,4.5,skincare,https://example.com/serum.jpg
-prod_003,Oil Control Moisturizer,32.50,4.1,skincare,https://example.com/moisturizer.jpg
-prod_004,Anti-Aging Cream,89.99,4.7,skincare,https://example.com/cream.jpg
-prod_005,Brightening Serum,55.00,4.3,skincare,https://example.com/brightening.jpg
