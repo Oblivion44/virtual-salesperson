@@ -1,132 +1,312 @@
-# AI Virtual Salesperson Chatbot - Planning & Documentation
+# Beauty Chatbot - Streamlit Version
 
-## 🎯 Project Overview
-This repository contains the comprehensive planning and documentation for an AI-powered virtual salesperson chatbot for a beauty e-commerce company. The chatbot will handle 24K products across Skin, Hair, and Makeup categories.
+An AI-powered virtual salesperson chatbot for beauty e-commerce, built with **Streamlit**, **Strand agents pattern**, **Claude 3.5**, and **NovelAI Reel** for video generation.
 
-## 📋 Project Status: Planning Phase Complete ✅
+## 🌟 Features
 
-### ✅ Phase 1: Requirements Analysis & Documentation
-- [x] User Stories Documentation (6 epics, 15+ user stories)
-- [x] Beauty Portfolio Data Structure
-- [x] Product Catalogue Structure  
-- [x] AI Guardrails & Content Filtering Requirements
-- [x] AWS Bedrock LLM Integration Requirements
+### Core Chatbot Capabilities
+- **Intelligent Conversation Flow**: Natural greeting and category detection (Skin/Hair/Makeup)
+- **Progressive Profile Building**: Collects user information without rigid forms
+- **AI-Powered Concern Analysis**: Uses Claude 3.5 for understanding beauty concerns
+- **Strand Agents Architecture**: Specialized agents for different tasks
 
-### ✅ Phase 2: Core Feature Planning  
-- [x] Feature 1: Skin/Hair Concern Analysis & Product Recommendations
-- [x] Feature 2: Educational Content Delivery (Videos & Tutorials)
-- [x] Feature 3: Personalized Beauty Routine Curation
-- [x] Budget Handling Logic (Customer-provided vs Top Sellers)
-- [x] Nykaa.com Integration & Product Linking
+### Specialized Agents
+- **BeautyChatbot**: Main orchestrator and conversation manager
+- **ConcernAnalysisAgent**: Analyzes skin/hair concerns and extracts user profile
+- **RecommendationAgent**: Generates personalized product recommendations
+- **EducationalAgent**: Provides tutorials and beauty education
+- **RoutineAgent**: Creates personalized beauty routines
 
-### 🚀 Next Phase: Technical Architecture (Ready to Start)
+### Advanced Features
+- **Video Tutorial Generation**: NovelAI Reel integration for 10-second tutorials
+- **Product Recommendations**: Smart filtering with sentiment analysis
+- **Nykaa Integration**: Direct product links with affiliate tracking
+- **Interactive UI**: Beautiful Streamlit interface with real-time updates
+- **Responsive Design**: Works on desktop and mobile devices
 
-## 🗂️ Documentation Structure
+## 🛠️ Technology Stack
 
-### `/inception/` - Complete Project Documentation
-- **`overview_user_stories.md`** - 6 epics with comprehensive user stories
-- **`beauty_portfolio_structure.md`** - Customer data collection framework
-- **`product_catalogue_structure.md`** - 24K product database structure
-- **`ai_guardrails_requirements.md`** - Safety and content filtering
-- **`aws_bedrock_integration.md`** - LLM integration architecture
-- **`feature_1_concern_analysis.md`** - Core recommendation engine
-- **`feature_2_educational_content.md`** - Video/tutorial system
-- **`feature_3_routine_curation.md`** - Personalized routine builder
-- **`budget_handling_logic.md`** - Smart budget processing
-- **`nykaa_integration_plan.md`** - E-commerce integration
+- **Frontend**: Streamlit with custom CSS styling
+- **AI/ML**: Claude 3.5 (Anthropic), TextBlob for sentiment analysis
+- **Video Generation**: NovelAI Reel API
+- **Data Processing**: Pandas, NumPy
+- **Async Operations**: asyncio, aiohttp
+- **Environment**: Python 3.8+
 
-### Root Files
-- **`plan.md`** - Master development plan with checkboxes
-- **`REPOSITORY_CLEANUP_SUMMARY.md`** - Repository transition notes
+## 📦 Installation & Setup
 
-## 🎯 Key Features Planned
+### Prerequisites
+- Python 3.8 or higher
+- pip package manager
+- API keys for Anthropic Claude and NovelAI (optional)
 
-### 1. Intelligent Conversation Flow
-- Natural greeting and category detection (Skin/Hair/Makeup)
-- Progressive profile building without rigid forms
-- AI-powered concern analysis using AWS Bedrock
+### Quick Start
 
-### 2. Personalized Recommendations
-- Multi-factor product filtering (type, concerns, age, budget)
-- Intelligent review filtering with NLP sentiment analysis
-- Compelling AI-generated sales pitches
-- Direct Nykaa.com integration with images and links
+1. **Clone and Navigate**
+   ```bash
+   cd beauty-chatbot-streamlit
+   ```
 
-### 3. Educational Content System
-- 10-second real human tutorial videos (no intro/outro)
-- Step-by-step visual guides and ingredient education
-- Home remedy suggestions with safety notes
-- Age-appropriate content personalization
+2. **Install Dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 4. Smart Budget Handling
-- Natural language budget detection
-- "Do you have any budget constraints?" approach
-- Top seller recommendations when no budget specified
-- Value proposition and cost-per-use communication
+3. **Environment Configuration**
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Edit `.env` with your API keys:
+   ```env
+   ANTHROPIC_API_KEY=your_claude_api_key_here
+   NOVELAI_API_KEY=your_novelai_api_key_here
+   NYKAA_AFFILIATE_ID=your_affiliate_id
+   ```
 
-### 5. Routine Curation Engine
-- Comprehensive skincare/haircare/makeup routines
-- Interactive customization capabilities
+4. **Run the Application**
+   ```bash
+   streamlit run app.py
+   ```
+
+5. **Access the App**
+   Open your browser to `http://localhost:8501`
+
+### Running in Spyder
+
+1. **Open Spyder IDE**
+2. **Navigate to the project directory**
+3. **Install requirements in Spyder's console:**
+   ```python
+   !pip install -r requirements.txt
+   ```
+4. **Run the app:**
+   ```python
+   !streamlit run app.py
+   ```
+5. **The app will open in your default browser**
+
+## 🏗️ Architecture
+
+### Strand Agents Pattern
+```
+BeautyChatbot (Main Orchestrator)
+├── ConcernAnalysisAgent (Profile & Concern Analysis)
+├── RecommendationAgent (Product Suggestions)
+├── EducationalAgent (Tutorials & Education)
+└── RoutineAgent (Routine Building)
+```
+
+### Service Layer
+- **VideoGenerator**: Handles NovelAI Reel integration
+- **ProductService**: Manages product data and Nykaa integration
+
+### Data Flow
+1. User interacts with Streamlit interface
+2. Main chatbot analyzes intent using Claude 3.5
+3. Routes to appropriate specialized agent
+4. Agent processes and returns structured response
+5. Streamlit updates UI with recommendations/videos/routines
+
+## 🎯 Key Features Implementation
+
+### 1. Interactive Chat Interface
+- Real-time conversation with Bella (AI beauty consultant)
+- Message history with beautiful styling
+- Suggestion chips for quick responses
+- User profile tracking in sidebar
+
+### 2. Product Recommendations
+```python
+# Multi-factor filtering
+recommendations = product_service.get_recommendations(
+    user_profile={
+        'category': 'skincare',
+        'concerns': ['acne', 'oiliness'],
+        'ageGroup': 'young_adults',
+        'budget': 'under 1000'
+    }
+)
+```
+
+### 3. Video Tutorial Generation
+```python
+# Generate 10-second beauty tutorials
+video_result = await video_generator.generate_video({
+    'prompt': 'skincare routine demonstration',
+    'style': 'tutorial',
+    'duration': 10
+})
+```
+
+### 4. Personalized Routines
+- Step-by-step beauty routines
 - Budget-aware product selection
-- Phased purchase recommendations
+- Customizable based on user preferences
+- Visual routine display with tips
 
-## 🛠️ Technical Specifications
+## 🔧 Configuration
 
-### Core Technologies
-- **LLM**: AWS Bedrock (Claude 3 + Titan models)
-- **Deployment**: Google Colab (POC)
-- **Integration**: Nykaa.com (images + product links)
-- **Data**: Product catalogue CSV + Reviews CSV
-- **Content**: Real human-like videos (10 seconds max)
+### API Keys Required
+- **Anthropic Claude**: For AI conversation and analysis
+- **NovelAI Reel**: For video tutorial generation
+- **Nykaa Affiliate** (optional): For product link tracking
 
-### Key Requirements
-- **Age Groups**: Teens (13-19), Young Adults (20-29), Adults (30-39), Mature (40+)
-- **Categories**: 24K products across Skin, Hair, Makeup
-- **Sub-categories**: Using canonical_l3 field from product catalogue
-- **Budget**: Customer-provided constraints, no predefined ranges
-- **Reviews**: Positive sentiment filtering with NLP
+### Environment Variables
+```env
+# Required for full functionality
+ANTHROPIC_API_KEY=your_key
+NOVELAI_API_KEY=your_key
 
-## 📊 Success Metrics Defined
-- **Accuracy**: 85%+ concern detection, 95%+ working Nykaa links
-- **Engagement**: 70%+ users request educational content
-- **Satisfaction**: 90%+ satisfaction with recommendations
-- **Adoption**: 60%+ customers adopt suggested routines
-- **Conversion**: 15%+ click-through rate to Nykaa
+# Optional
+NYKAA_AFFILIATE_ID=your_id
+STREAMLIT_SERVER_PORT=8501
+```
 
-## 🚀 Implementation Roadmap
+## 📱 Usage Examples
 
-### Phase 3: Technical Architecture (Next)
-- Web-based UI architecture for Google Colab
-- AWS Bedrock LLM integration architecture
-- NLP sentiment analysis system design
-- AI content generation pipeline
-- Product recommendation algorithm
+### Starting a Conversation
+```
+User: "I have oily skin and acne problems"
+Bella: "I understand you're dealing with oily skin and acne - that's very common and manageable! Let me help you find the right products..."
+```
 
-### Phase 4: Data Management
-- Beauty portfolio data collection methods
-- Product catalogue integration (24K products)
-- Review filtering and sentiment analysis
-- Content generation and storage
+### Getting Product Recommendations
+- Click "🧴 Get Products" in sidebar
+- Or say "Show me product recommendations"
+- View products with ratings, prices, and Nykaa links
 
-### Phase 5: User Experience Design
-- Conversation flow implementation
-- Product presentation format
-- Routine curation interface
-- Educational content delivery
+### Building Routines
+- Click "📋 Build Routine" in sidebar
+- Or say "Create a skincare routine for me"
+- Get step-by-step personalized routines
 
-### Phase 6: Implementation & Testing
-- Google Colab environment setup
-- Component development and integration
-- Testing strategy and validation
-- POC deployment and demonstration
+### Video Tutorials
+- Click "🎥 Tutorials" in sidebar
+- Or say "Show me how to apply skincare"
+- Get video tutorials or text alternatives
 
-## 📝 Development Notes
-- All documentation follows product manager specifications
-- User stories serve as development contracts
-- Comprehensive planning ensures smooth implementation
-- Ready for technical architecture phase
+## 🎨 UI Features
+
+### Beautiful Interface
+- Gradient headers and modern styling
+- Chat bubbles with proper alignment
+- Product cards with images and ratings
+- Routine steps with visual organization
+- Responsive design for all devices
+
+### Interactive Elements
+- Suggestion chips for quick responses
+- Quick action buttons in sidebar
+- Real-time profile updates
+- Status indicators for API connections
+
+### Sidebar Features
+- User profile display
+- Quick action buttons
+- Settings and API status
+- Reset conversation option
+
+## 🧪 Demo Mode
+
+The app works in **demo mode** without API keys:
+- Fallback responses using rule-based logic
+- Sample product recommendations
+- Text tutorials instead of videos
+- Full UI functionality for testing
+
+## 🚀 Deployment Options
+
+### Local Development
+```bash
+streamlit run app.py
+```
+
+### Streamlit Cloud
+1. Push to GitHub repository
+2. Connect to Streamlit Cloud
+3. Add environment variables in settings
+4. Deploy automatically
+
+### Docker Deployment
+```dockerfile
+FROM python:3.9-slim
+COPY . /app
+WORKDIR /app
+RUN pip install -r requirements.txt
+EXPOSE 8501
+CMD ["streamlit", "run", "app.py"]
+```
+
+## 📊 Performance Features
+
+- **Async Operations**: Non-blocking API calls
+- **Caching**: Streamlit caching for better performance
+- **Error Handling**: Graceful fallbacks when APIs fail
+- **Session Management**: Persistent conversation state
+
+## 🔒 Security
+
+- API keys stored in environment variables
+- Input validation on all user messages
+- No sensitive data stored in session state
+- Secure API communication with proper headers
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/new-feature`
+3. Commit changes: `git commit -am 'Add new feature'`
+4. Push to branch: `git push origin feature/new-feature`
+5. Submit pull request
+
+## 📄 License
+
+MIT License - see LICENSE file for details
+
+## 🆘 Troubleshooting
+
+### Common Issues
+
+1. **Import Errors**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **API Key Issues**
+   - Check `.env` file exists and has correct keys
+   - Verify API keys are valid
+   - App works in demo mode without keys
+
+3. **Streamlit Issues**
+   ```bash
+   streamlit --version
+   streamlit run app.py --server.port 8501
+   ```
+
+4. **Video Generation Fails**
+   - Check NovelAI API key
+   - App provides text tutorials as fallback
+   - Network connectivity required
+
+## 🔮 Future Enhancements
+
+- Voice chat integration
+- Image upload for skin analysis
+- AR makeup try-on features
+- Integration with more e-commerce platforms
+- Advanced analytics dashboard
+- Multi-language support
 
 ---
 
-**Status**: Planning Complete ✅ | **Next**: Technical Architecture Design
-**Last Updated**: August 23, 2025 | **Phase**: 2/6 Complete
+**Perfect for Spyder Users! 🐍**
+
+This Streamlit version is specifically designed to work seamlessly in Spyder IDE:
+- Easy to run with `!streamlit run app.py`
+- All Python dependencies managed through pip
+- Beautiful web interface that opens in your browser
+- Full debugging capabilities in Spyder
+- Interactive development with hot reloading
+
+**Built with ❤️ for the beauty community and Python developers**
